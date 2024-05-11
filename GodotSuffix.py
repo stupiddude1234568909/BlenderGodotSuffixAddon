@@ -30,6 +30,8 @@ class __PT__GodotSuffix(bpy.types.Panel):
 
         row3 = layout.row(); row3.operator("object.rigidbodysuffix")
 
+        row4 = layout.row(); row4.operator("object.noimportsuffix")
+
 #this is there class that the suffix apliers deviate from, since they might need differnet functionality. 
 #doens't call the bpy.types.Operator cause that make it go broken, you don't need it for a an operator.
 #to make operators they need to start with Object.
