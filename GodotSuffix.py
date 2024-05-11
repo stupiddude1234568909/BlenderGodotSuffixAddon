@@ -92,7 +92,7 @@ class ObjectConvcolColliderSuffix(ObjectSuffixTemplate):
         return super().execute(context)
 
 class ObjectNoImportSuffix(ObjectSuffixTemplate):
-    bl_idname = "object.NoImportSuffix"
+    bl_idname = "object.noimportsuffix"
     bl_label = "No import"
 
     suffix = "-noimp"
