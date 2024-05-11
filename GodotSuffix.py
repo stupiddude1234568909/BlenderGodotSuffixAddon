@@ -91,6 +91,15 @@ class ObjectConvcolColliderSuffix(ObjectSuffixTemplate):
         context.active_object.name = self.append_suffix(context.active_object.name)
         return super().execute(context)
 
+class ObjectNoImportSuffix(ObjectSuffixTemplate):
+    bl_idname = "object.NoImportSuffix"
+    bl_label = "No import"
+
+    suffix = "-noimp"
+
+    def execute(self, context: Context) -> Set[str] | Set[int]:
+        context.active_object.name = self.append_suffix(context.active_object.name)
+        return super().execute(context)
 
 
 def register():
@@ -98,12 +107,14 @@ def register():
     bpy.utils.register_class(ObjectColliderSuffix)
     bpy.utils.register_class(ObjectRigidbodySuffix)
     bpy.utils.register_class(ObjectConvcolColliderSuffix)
+    bpy.utils.register_class(ObjectNoImportSuffix)
  
 def unregister():
     bpy.utils.unregister_class(__PT__GodotSuffix)
     bpy.utils.unregister_class(ObjectColliderSuffix)
     bpy.utils.unregister_class(ObjectRigidbodySuffix)
     bpy.utils.unregister_class(ObjectConvcolColliderSuffix)
+    bpy.utils.unregister_class(ObjectNoImportSuffix)
 
 if __name__ == "__main__":
     register()
