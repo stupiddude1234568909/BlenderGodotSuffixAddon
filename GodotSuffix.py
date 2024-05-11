@@ -11,6 +11,7 @@ bl_info = {
  "category": "Q.O.L",
 }
 
+#this is a test
 class __PT__GodotSuffix(bpy.types.Panel):
     bl_idname = "OBJECT__PT__GodotSuffix"
     bl_label = "Godot import hints"
